@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+nav > h1{
+    font-family: 'Lobster', cursive;
+    color: #000;
+    display: inline-block;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    min-width: 400px;
+}
+a:hover, button:hover{
+    text-decoration:underline;
+    cursor: pointer;
+}
+a, button{
+    text-decoration: none;
+    color: #fff;
+}
+h1{
+    font-size: 35px;;
+}
+aside a, section button, aside button{
+    background-color: #425465;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+section a{
+    font-weight: 600;
+    text-align: center;
+    max-width: 222px;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+section{
+    background-image: url("images/pexels-picjumbocom-196644.jpg");
+}
+section:last-child {
+    background-image: url("images/pexels-travis-saylor-951409.jpg");
+}
+section:first-child {
+    background-image: url("images/pexels-panumas-nikhomkhai-1148820.jpg");
+    padding-top: 170px;
+}
+h2{
+    font-size: 40px;
+    grid-column: span 2;
+}
+nav{
+    position: fixed;
+    background-color: #ffddb0;
+    width: 100%;
+    border-radius: 0 0 0 50px;
+}
+nav > a{
+    color: #000;
+}
+.navButton{
+    position: fixed;
+    left: calc(100% - 65px);
+    top: 70px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+.navButton:checked{
+    width: 100%;
+    height: 100%;
+}
+.navButton:checked + aside{
+    margin-left: 0;
+}
+body > aside{
+    position: fixed;
+    margin-left: -100%;
+    transition: margin-left 0.5s;
+    background-color: #333;
+    width: 85%;
+    height: 100%;
+}
+body > aside > a{
+    display: block;
+    background-color: #333;
+    height: 20%;
+    margin-top: 10%;
+    font-size: 40px;
+}
+.navButtonDisplay{
+    background-color: #ffffff00;
+    padding: 0;
+    font-size: 60px;
+    border: none;
+    margin: 0;
+    float: right;
+    margin-right: 20px;
+    display: none;
+}
+footer{
+    margin:0;
+    padding: 50px;
+}
+footer a{
+    color: #ffffffcc;
+}
+nav > a{
+    padding: 10px;
+}
+@media screen and (min-width: 400px) and (max-width: 700px){
+    section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav > a{
+        display:none;
+    }
+    nav > .navButtonDisplay{
+        display:inline-block;
+    }
+    div{
+        grid-column: span 2;
+    }
+}
+@media screen and (max-width: 400px){
+    section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section h2{
+        grid-column: span 1;
+    }
+    nav > a{
+        display:none;
+    }
+    nav > .navButtonDisplay{
+        display:inline-block;
+    }
+    section:first-child {
+        padding-top: 220px;
+    }
+    .navButton{
+        top: 125px;
+    }
+    div{
+        grid-column: span 1;
+    }
+}
+#more2, #more1, #more3{
+    width:25%;
+    height:75%;
+    margin-left: 50%;
+}
+label[for="more1"],label[for="more2"],label[for="more3"]{
+    margin-right: 50%;
+    text-align: center;
+    max-width: 222px;
+    font-size: 40px;
+}
+#more2:checked ~ button, 
+#more1:checked ~ button, 
+#more3:checked ~ button,
+#more2:checked ~ input{
+    display: block;
+}
+#more2 ~ button, 
+#more1 ~ button, 
+#more3 ~ button,
+#more2 ~ input{
+    display: none;
+}
+i{
+    font-style: italic;
+}
